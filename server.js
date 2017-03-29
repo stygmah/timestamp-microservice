@@ -6,8 +6,6 @@ const port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.json());
 
-console.log(new Date(984528000));
-
 
 app.get('/:date',(req,res)=>{
   //convert to int if Unix timestamp
