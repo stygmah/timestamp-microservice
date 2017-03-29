@@ -10,7 +10,6 @@ console.log(new Date(984528000));
 
 
 app.get('/:date',(req,res)=>{
-  
   //convert to int if Unix timestamp
   if(!isNaN(req.params.date)){
     date = parseInt(date);
