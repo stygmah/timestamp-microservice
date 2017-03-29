@@ -7,14 +7,15 @@ var app = express();
 app.use(bodyParser.json());
 
 
-app.post('/:date',(req,res)=>{
+app.get('/:date',(req,res)=>{
   var date = req.date;
   var newDate= new Date(date);
   var returnDate = {
     textDate: null,
     unixTimeStamp: null
   }
-  
+  console.log("date: "+date);
+  console.log("New Date: "+newDate);
   //check if valid and then if unix timestamp or date text, convert after the
   //missing one
   if((newDate==="Invalid Date")){
