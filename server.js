@@ -6,10 +6,16 @@ const port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.json());
 
+console.log(new Date(984528000));
+
 
 app.get('/:date',(req,res)=>{
   var date = req.params.date;
-  var newDate= new Date(date);
+  if(isNaN(date)){
+    var newDate= new Date(date);
+  }else{
+    var newDate= new Date(date.parseInt());
+  }
   var returnDate = {
     textDate: null,
     unixTimeStamp: null
