@@ -8,13 +8,13 @@ app.use(bodyParser.json());
 
 
 app.get('/:date',(req,res)=>{
-  var date = req.date;
+  var date = req.params.date;
   var newDate= new Date(date);
   var returnDate = {
     textDate: null,
     unixTimeStamp: null
   }
-  console.log(req.query,req.query.date);
+  console.log(req.params.date,req.query.date);
   console.log("date: "+date);
   console.log("New Date: "+newDate);
   //check if valid and then if unix timestamp or date text, convert after the
