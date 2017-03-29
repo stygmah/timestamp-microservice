@@ -16,10 +16,10 @@ app.get('/:date',(req,res)=>{
   }
   console.log("date: "+date);
   console.log("New Date: "+newDate);
-  console.log(newDate==="Invalid Date");
+  console.log(newDate=="Invalid Date");
   //check if valid and then if unix timestamp or date text, convert after the
   //missing one
-  if(!(newDate==="Invalid Date")){
+  if(!(newDate=="Invalid Date")){
     if(isNaN(date)){
       //text date
       returnDate.textDate = date;
