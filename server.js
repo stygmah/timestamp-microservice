@@ -10,20 +10,19 @@ console.log(new Date(984528000));
 
 
 app.get('/:date',(req,res)=>{
-  var date = req.params.date;
-  if(!isNaN(date)){
-    date = parseInt(date);
-  }
   
+  //convert to int if Unix timestamp
+  if(!isNaN(req.params.date)){
+    date = parseInt(date);
+  }else{
+    var date = req.params.date;
+  }
+  //convert to new date
   var newDate= new Date(date);
   var returnDate = {
     textDate: null,
     unixTimeStamp: null
   }
-  
-  console.log("date: "+date);
-  console.log("New Date: "+newDate);
-  console.log(newDate=="Invalid Date");
   //check if valid and then if unix timestamp or date text, convert after the
   //missing one
   if(!(newDate=="Invalid Date")){
