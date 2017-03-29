@@ -14,6 +14,7 @@ app.get('/:date',(req,res)=>{
     textDate: null,
     unixTimeStamp: null
   }
+  console.log(req.body);
   console.log("date: "+date);
   console.log("New Date: "+newDate);
   //check if valid and then if unix timestamp or date text, convert after the
