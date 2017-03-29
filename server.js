@@ -12,7 +12,7 @@ console.log(new Date(984528000));
 app.get('/:date',(req,res)=>{
   var date = req.params.date;
   if(!isNaN(date)){
-    date = date.parseInt();
+    date = parseInt(date);
   }
   
   var newDate= new Date(date);
