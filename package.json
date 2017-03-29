@@ -5,6 +5,12 @@
   "main": "server.js",
   "repository": "",
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.17.1",
